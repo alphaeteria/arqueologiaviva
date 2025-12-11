@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arqueologia Viva - Biblioteca Científica</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-container">
+        <div class="overlay"></div>
+    </div>
+
+    <header class="news-header">
+        <div class="header-content">
+            <div class="header-left">
+                <a href="index.html" class="back-btn-circle" title="Voltar">
+                    <i class="fa-solid fa-arrow-left"></i>
+                </a>
+                <div class="header-divider"></div>
+                <h1 class="page-title">Acervo Científico</h1>
+            </div>
+            <div class="header-right">
+                <span class="update-badge"><i class="fa-solid fa-database"></i> Base Verificada</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content articles-layout">
+        
+        <section class="library-controls">
+            <div class="library-intro">
+                <h2>Explore o Conhecimento</h2>
+                <p>Navegue por artigos revisados sobre arqueologia e tecnologia.</p>
+            </div>
+            
+            <div class="search-box-wrapper">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Filtrar por título, autor...">
+            </div>
+        </section>
+
+        <section class="articles-grid" id="articles-grid">
+            </section>
+
+    </main>
+
+    <div id="reader-modal" class="modal-overlay hidden">
+        <div class="modal-content glass-panel">
+            <button class="close-modal-btn" id="close-modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-header">
+                <span class="article-tag" id="modal-tag">Tag</span>
+                <h2 id="modal-title">Título</h2>
+                <p id="modal-author" class="meta-info">Autores</p>
+            </div>
+            <div class="modal-body">
+                <div class="text-column">
+                    <h3><i class="fa-solid fa-file-lines"></i> Resumo Original</h3>
+                    <div id="original-text" class="scrollable-text"></div>
+                    <a href="#" id="external-link" target="_blank" class="external-link-btn"><i class="fa-solid fa-external-link-alt"></i> Ver PDF Original</a>
+                </div>
+                <div class="ai-controls">
+                    <button id="btn-translate" class="ai-action-btn"><i class="fa-solid fa-language"></i><span>Traduzir</span></button>
+                    <div class="connector-line"></div>
+                    <button id="btn-simplify" class="ai-action-btn"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Explique</span></button>
+                </div>
+                <div class="text-column result-column">
+                    <h3><i class="fa-solid fa-robot"></i> Análise da IA</h3>
+                    <div id="ai-result" class="scrollable-text ai-placeholder">Selecione uma opção...</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src ="dados.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

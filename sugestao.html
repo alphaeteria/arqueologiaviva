@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arqueologia Viva - Deixe sua Sugestão</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <div class="background-container">
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Header Simples -->
+    <header class="top-nav">
+        <button class="back-btn" onclick="window.location.href='index.html'">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+        </button>
+        <div class="page-title">
+            <i class="fa-regular fa-lightbulb"></i> Ajude-nos a melhorar!
+        </div>
+    </header>
+
+    <main class="main-content feedback-layout">
+        
+        <section class="glass-panel form-panel">
+            <h2>Sua Voz na História</h2>
+            <p>Conhece um sítio arqueológico não listado? Tem uma ideia para o site? Conte para nós.</p>
+            
+            <form id="feedback-form">
+                <div class="form-group">
+                    <label for="name">Nome (Opcional)</label>
+                    <input type="text" id="name" placeholder="Como devemos te chamar?">
+                </div>
+
+                <div class="form-group">
+                    <label>Está gostando do nosso projeto?</label>
+                    <!-- Sistema de Estrelas: Note que usamos fa-regular (borda) inicialmente -->
+                    <div class="rating-box">
+                        <input type="radio" name="rating" value="5" id="star-5"><label for="star-5" title="5 estrelas"><i class="fa-regular fa-star"></i></label>
+                        <input type="radio" name="rating" value="4" id="star-4"><label for="star-4" title="4 estrelas"><i class="fa-regular fa-star"></i></label>
+                        <input type="radio" name="rating" value="3" id="star-3"><label for="star-3" title="3 estrelas"><i class="fa-regular fa-star"></i></label>
+                        <input type="radio" name="rating" value="2" id="star-2"><label for="star-2" title="2 estrelas"><i class="fa-regular fa-star"></i></label>
+                        <input type="radio" name="rating" value="1" id="star-1"><label for="star-1" title="1 estrela"><i class="fa-regular fa-star"></i></label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Sua Sugestão ou Descoberta <span style="color:#e0c097">*</span></label>
+                    <textarea id="message" required placeholder="Digite aqui sua mensagem..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">
+                    <span id="btn-text">Enviar Contribuição</span>
+                    <i class="fa-solid fa-paper-plane"></i>
+                </button>
+            </form>
+
+            <!-- Mensagem de Sucesso (Oculta inicialmente) -->
+            <div id="success-message" class="hidden">
+                <i class="fa-solid fa-check-circle"></i>
+                <p>Obrigada! Sua contribuição foi registrada.</p>
+            </div>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arqueologia Viva - A Nossa História</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="no-scroll"> 
+
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+
+    <div id="page-loader" class="loader-overlay">
+        <div class="loader-content">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-bottom: 1.5rem;">
+                <img src="etherealogo.png" alt="Logo Projeto" style="width: 120px; height: auto; object-fit: contain;">
+                <img src="Logo_LiceuSalvador.png" alt="Logo Escola" style="width: 120px; height: auto; object-fit: contain;">
+            </div>
+            <span class="loader-text">Carregando História...</span>
+        </div>
+    </div>
+
+    <div class="background-container">
+        <div class="overlay" style="background: rgba(0,0,0,0.85);"></div>
+    </div>
+
+    <div class="top-nav" style="position: fixed; top: 0; width: 100%; z-index: 1000; background: transparent;">
+        <button class="back-btn" onclick="navigateTo('index.html')">
+            <i class="fa-solid fa-arrow-left"></i> Voltar
+        </button>
+    </div>
+
+    <main class="snap-container">
+        
+        <div class="snap-section hero-trigger">
+            <section class="about-section">
+                <div class="about-wrapper">
+                    
+                    <div class="about-text-content reveal-on-scroll visible">
+                        <span class="section-label">Capítulo 1</span>
+                        <h2 class="section-heading">A Pulga Atrás da Orelha</h2>
+                        <p class="about-paragraph">
+                            O projeto Arqueologia Viva surgiu de um longo processo. Após visitarmos o Museu de Arqueologia da Bahia e o Instituto de Geociências, ficamos com uma dúvida: não identificamos de imediato nenhuma temática na qual poderíamos trabalhar... ou foi o que pensamos na hora.
+                        </p>
+                        <p class="about-paragraph">
+                            O estalo aconteceu na semana seguinte, quando a professora Taty nos contou sobre o <strong>novo sítio arqueológico descoberto na região da Pupileira</strong> e das dificuldades sobre a interdição e escavação. Ela explicou que um dos maiores desafios envolvia a aprovação da população local, já que a obra afetaria o seu dia a dia.
+                        </p>
+                    </div>
+
+                    <div class="about-visuals">
+                        <div class="feature-card reveal-on-scroll reveal-delay-1" style="border-color: #e0c097;">
+                            <div class="feature-icon"><i class="fa-solid fa-lightbulb"></i></div>
+                            <div class="feature-info">
+                                <h4>O Estalo</h4>
+                                <p>A conexão entre a teoria do museu e a realidade da Pupileira.</p>
+                            </div>
+                        </div>
+                        <div class="galeria-arqueologia reveal-on-scroll reveal-delay-2">
+                            <img src="IGEO1.jpg" alt="Escavação">
+                            <img src="IGEO2.jpg" alt="Visita">
+                            <img src="IGEO3.jpg" alt="Descrição">
+                            <img src="IGEO4.jpg" alt="Descrição">
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="snap-section">
+            <section class="about-section">
+                <div class="about-wrapper">
+                    
+                    <div class="about-visuals">
+                        <div class="feature-card reveal-on-scroll reveal-delay-1">
+                            <div class="feature-icon"><i class="fa-solid fa-people-group"></i></div>
+                            <div class="feature-info">
+                                <h4>Conscientização</h4>
+                                <p>Transformar incômodo em valorização histórica.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card reveal-on-scroll reveal-delay-2">
+                            <div class="feature-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <div class="feature-info">
+                                <h4>Aprendizado Real</h4>
+                                <p>Entender a diferença entre Arqueologia e Paleontologia mudou nossa visão.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-text-content reveal-on-scroll">
+                        <span class="section-label">Capítulo 2</span>
+                        <h2 class="section-heading">Educação Gera Aceitação</h2>
+                        <p class="about-paragraph">
+                            Foi então que nos lembramos do dia das visitas: pensamos que, se as pessoas soubessem mais sobre a importância por trás dessas escavações, a aceitação seria maior.
+                        </p>
+                        <p class="about-paragraph">
+                            Antes da UFBA, nós não sabíamos nem mesmo a diferença entre arqueologia e paleontologia — algo que um estudante nos explicou lá. Pensamos: <em>"E se pudéssemos proporcionar uma experiência interativa onde as pessoas pudessem explorar esse mundo?"</em>. Assim nasceu o Arqueologia Viva: espalhar conhecimento de forma simples, para todos.
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+        <div class="snap-section">
+            <section class="about-section">
+                <div class="about-wrapper">
+                    
+                    <div class="about-text-content reveal-on-scroll">
+                        <span class="section-label">Capítulo 3</span>
+                        <h2 class="section-heading">Da NASA para a Bahia</h2>
+                        <p class="about-paragraph">
+                            Inspirados pelo <em>Eyes on Earth</em> da NASA (que usamos na feira SEMOCS, quando fizemos um planetário), decidimos criar um site para explorar sítios arqueológicos globais. Mas fomos além.
+                        </p>
+                        <p class="about-paragraph">
+                            Sabemos que a ciência pode ser difícil de ler (nós mesmos passamos por isso enquanto pesquisávamos). Por isso, integramos uma <strong>Inteligência Artificial</strong> capaz de traduzir e simplificar artigos complexos, tornando o conhecimento democrático, mas mantendo o rigor científico.
+                        </p>
+                        <p class="about-paragraph" style="font-size: 0.9rem; color: #888; border-top: 1px solid #333; padding-top: 15px;">
+                            <i class="fa-solid fa-wrench"></i> <em>Nota: O projeto ainda é um protótipo. Buscamos evoluir e continuar contribuindo para a comunidade científica!</em>
+                        </p>
+                    </div>
+
+                    <div class="about-visuals">
+                        <div class="feature-card reveal-on-scroll reveal-delay-1">
+                            <div class="feature-icon"><i class="fa-solid fa-globe"></i></div>
+                            <div class="feature-info">
+                                <h4>Exploração 3D</h4>
+                                <p>Inspirado em tecnologias espaciais para mapear nossa história.</p>
+                            </div>
+                        </div>
+                        <div class="feature-card reveal-on-scroll reveal-delay-2">
+                            <div class="feature-icon"><i class="fa-solid fa-microchip"></i></div>
+                            <div class="feature-info">
+                                <h4>IA Democratizadora</h4>
+                                <p>Traduzindo "cientifiquês" para a linguagem do povo.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+    <div id="modal-galeria" class="modal">
+        <span class="fechar">&times;</span>
+        <img class="modal-conteudo" id="img-ampliada">
+        <div id="legenda"></div>
+    </div>
+    <script>
+    // Pega o modal
+    var modal = document.getElementById("modal-galeria");
+
+    // Pega a imagem onde a foto ampliada vai aparecer
+    var modalImg = document.getElementById("img-ampliada");
+    
+    // Pega todas as imagens da nossa galeria
+    var imagens = document.querySelectorAll(".galeria-arqueologia img");
+
+    // Adiciona o evento de clique em CADA imagem da galeria
+    imagens.forEach(img => {
+        img.style.cursor = 'pointer'; // Muda o cursor para mãozinha
+        img.addEventListener('click', function(){
+            modal.style.display = "block";
+            modalImg.src = this.src; // Pega o SRC da imagem clicada e joga no modal
+            // Se quiser usar o texto 'alt' como legenda, descomente a linha abaixo:
+            // document.getElementById("legenda").innerHTML = this.alt;
+        });
+    });
+
+    // Pega o botão de fechar
+    var span = document.getElementsByClassName("fechar")[0];
+
+    // Quando clicar no X, fecha o modal
+    span.onclick = function() { 
+        modal.style.display = "none";
+    }
+
+    // (Opcional) Fecha também se clicar fora da imagem (no fundo preto)
+    modal.onclick = function(event) {
+        if (event.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+</body>
+</html>

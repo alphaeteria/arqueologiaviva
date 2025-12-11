@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprenda Mais | Arqueologia Viva</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <style>
+        /* CSS EMBUTIDO PARA GARANTIR QUE FUNCIONE IMEDIATAMENTE */
+        
+        :root {
+            --cor-dourada: #deb887; /* O tom bege/dourado dos seus botões */
+            --cor-fundo-card: rgba(20, 20, 20, 0.8);
+            --cor-texto: #f5f5f5;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--cor-texto);
+            min-height: 100vh;
+            /* DICA: Coloque aqui o mesmo nome da imagem de fundo da sua Home */
+            background-image: url('https://png.pngtree.com/background/20250130/original/pngtree-egyptian-hieroglyphics-vintage-background-picture-image_15459322.jpg'); 
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            position: relative;
+        }
+
+        /* Camada preta transparente para escurecer o fundo e dar leitura */
+        .overlay {
+            background: rgba(0, 0, 0, 0.85); /* 85% preto */
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+        }
+
+        /* --- CABEÇALHO --- */
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            max-width: 800px;
+            animation: fadeIn Down 1s ease;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', serif; /* Fonte serifada igual à Home */
+            font-size: 3.5rem;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        header h1 span {
+            color: var(--cor-dourada); /* Destaque em dourado */
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #ccc;
+            line-height: 1.6;
+            font-weight: 300;
+        }
+
+        /* --- GRID DE CARDS --- */
+        .grid-fontes {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
+            width: 100%;
+            max-width: 1200px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03); /* Vidro escuro sutil */
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            height: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* O logo dentro do card */
+        .card img {
+            max-width: 140px;
+            max-height: 60px;
+            opacity: 0.6; /* Logo meio apagada */
+            filter: grayscale(100%); /* Logo preto e branco */
+            transition: all 0.3s ease;
+        }
+
+        /* Efeito ao passar o mouse (HOVER) */
+        .card:hover {
+            border-color: var(--cor-dourada);
+            background: rgba(222, 184, 135, 0.05);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .card:hover img {
+            opacity: 1;
+            filter: grayscale(0%); /* Logo ganha cor */
+            transform: scale(1.1);
+        }
+
+        /* Se a imagem quebrar, mostra o texto bonito */
+        .card span {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--cor-texto);
+            display: none; /* Esconde se tiver imagem, mostra via JS se quebrar */
+        }
+        
+        /* Fallback: se não tiver imagem, mostra texto */
+        .card img[src=""], .card img:not([src]) {
+            display: none;
+        }
+        .card img[src=""] + span {
+            display: block;
+        }
+
+        /* --- BOTÃO VOLTAR (Igual ao da Home) --- */
+        .btn-voltar-container {
+            position: fixed; /* Fixo na tela ou no final? Vamos deixar no final para não atrapalhar */
+            bottom: 30px;
+            z-index: 100;
+        }
+
+        .btn-voltar {
+            background-color: var(--cor-dourada);
+            color: #0f0f0f; /* Texto escuro para contraste */
+            padding: 12px 35px;
+            border-radius: 50px; /* Formato Pílula */
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(222, 184, 135, 0.3);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .btn-voltar:hover {
+            transform: scale(1.05);
+            background-color: #eecba0;
+            box-shadow: 0 6px 20px rgba(222, 184, 135, 0.5);
+        }
+
+        /* Animação de entrada */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        /* Ajuste Mobile */
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.5rem; }
+            .grid-fontes { grid-template-columns: repeat(2, 1fr); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        
+        <header>
+            <h1>Aprenda <span>Mais</span></h1>
+            <p>A ciência exige precisão. Selecionamos <bold>fontes confiáveis</bold> para você aprofundar seus estudos com segurança.</p>
+        </header>
+
+        <div class="grid-fontes">
+            <a href="https://www.nature.com/" target="_blank" class="card">
+                <img src="nature.jpg" alt="Nature" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span>Nature</span> 
+            </a>
+
+            <a href="https://www.nationalgeographicbrasil.com/" target="_blank" class="card">
+                <img src="natgeo.png" alt="NatGeo" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span>NatGeo</span>
+            </a>
+
+            <a href="https://www.archaeology.org/" target="_blank" class="card">
+                <img src="https://archaeology.org/wp-content/uploads/2024/06/Archaeology-Magazine-Logo-Square.jpg" alt="Archaeology Magazine" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span>Archaeology Mag</span>
+            </a>
+
+            <a href="https://www.science.org/" target="_blank" class="card">
+                <img src="science.png" alt="Science" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span>Science</span>
+            </a>
+
+            <a href="https://www.cnnbrasil.com.br/tecnologia/" target="_blank" class="card">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/CNN_Logo_%282014%29.svg/1200px-CNN_Logo_%282014%29.svg.png" alt="CNN" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span>CNN</span>
+            </a>
+
+            <a href="https://www.gov.br/iphan/pt-br/" target="_blank" class="card" style="border-left: 3px solid #009c3b;">
+                <img src="https://www.chiaviniesantos.com/wp-content/themes/yootheme/cache/e5/iphan-instituto-do-patrimonio-historico-e-artistico-nacional-e583fd9c.jpeg" alt="IPHAN" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span>IPHAN 🇧🇷</span>
+            </a>
+
+            <a href="https://sabnet.org/" target="_blank" class="card" style="border-left: 3px solid #009c3b;">
+                <img src="https://stratusarqueologia.com.br/assets/images/sabnet-1-377x377.png" alt="SAB Arqueologia" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span>SAB 🇧🇷</span>
+            </a>
+
+            <a href="https://www.smithsonianmag.com/" target="_blank" class="card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRMQFvbUheXJ1d1gDPpxm088-Oqd_VwSHQPIw&s" alt="Smithsonian" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span>Smithsonian</span>
+            </a>
+
+             <a href="https://www.scientificamerican.com/" target="_blank" class="card">
+                <img src="https://static.scientificamerican.com/sciam/assets/Image/2020/sa2007-07-01.jpg?w=600" alt="SciAm" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span>SciAm</span>
+            </a>
+
+            <a href="https://www.bbc.com/portuguese/topics/cz74k717pw5t" target="_blank" class="card">
+                <img src="https://logos-world.net/wp-content/uploads/2022/01/BBC-Emblem.png" alt="BBC" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                <span>BBC Science</span>
+            </a>
+        </div>
+
+        <div class="btn-voltar-container">
+            <a href="index.html" class="btn-voltar">
+                ⬅ Voltar
+            </a>
+        </div>
+
+    </div>
+
+</body>
+</html>

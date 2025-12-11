@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arqueologia Viva - Redescobrindo Nossa História</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="no-scroll"> 
+
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+
+    <div id="page-loader" class="loader-overlay">
+        <div class="loader-content">
+            <div style="display: flex; justify-content: center; align-items: center; gap: 30px; margin-bottom: 1.5rem;">
+                <img src="etherealogo.png" alt="Logo Projeto" style="width: 120px; height: auto; object-fit: contain;">
+                <img src="Logo_LiceuSalvador.png" alt="Logo Escola" style="width: 120px; height: auto; object-fit: contain;">
+            </div>
+            <span class="loader-text">Arqueologia Viva</span>
+        </div>
+    </div>
+
+    <div class="background-container">
+        <div class="overlay-hero"></div>
+    </div>
+
+<div class="top-right-actions">
+        <a href="#" onclick="navigateTo('sobre_projeto.html'); return false;" class="top-right-link" style="background: rgba(224, 192, 151, 0.15); color: #e0c097; border: 1px solid rgba(224, 192, 151, 0.3);">
+            <i class="fa-solid fa-scroll"></i> Sobre o Projeto
+        </a>
+
+        <a href="#" onclick="navigateTo('aboutus.html'); return false;" class="top-right-link">
+            <i class="fa-solid fa-circle-info"></i> Sobre Nós
+        </a>
+        <a href="#" onclick="navigateTo('sugestao.html'); return false;" class="top-right-link">
+            <i class="fa-regular fa-comment-dots"></i> Deixe sua sugestão
+        </a>
+    </div>
+
+    <aside id="depth-nav" class="depth-nav-container">
+        <div class="depth-line"></div>
+        <div class="depth-buttons">
+            <button class="depth-btn" onclick="navigateTo('noticias.html')" title="Notícias">
+                <i class="fa-solid fa-newspaper"></i>
+            </button>
+            <button class="depth-btn" onclick="navigateTo('artigos.html')" title="Artigos">
+                <i class="fa-solid fa-book-open"></i>
+            </button>
+            <button class="depth-btn" onclick="navigateTo('mapa.html')" title="Mapa 3D">
+                <i class="fa-solid fa-map-location-dot"></i>
+            </button>
+            <button class="depth-btn" onclick="navigateTo('aprenda.html')" title="Aprenda Mais">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </button>
+        </div>
+    </aside>
+
+    <main class="snap-container">
+        
+        <div class="snap-section hero-trigger"> <section class="hero-section">
+                <div class="hero-content">
+                    <div class="hero-text-wrapper reveal-on-scroll visible">
+                        <span class="hero-subtitle">Redescobrindo Salvador</span>
+                        <h1 class="hero-title">A História <br>Sob Nossos Pés</h1>
+                        
+                        <p class="hero-description">
+                            A arqueologia reconstrói quem fomos. Em locais como a <strong>Pupileira</strong>, a poucos metros da superfície, 
+                            residem séculos de memórias que moldaram nossa identidade. Explorar o passado é o primeiro passo para preservar o futuro.
+                        </p>
+
+                        <nav class="hero-nav">
+                            <button class="nav-btn primary-btn" onclick="navigateTo('noticias.html')">
+                                <i class="fa-solid fa-newspaper"></i> Notícias
+                            </button>
+                            
+                            <button class="nav-btn ghost-btn" onclick="navigateTo('artigos.html')">
+                                <i class="fa-solid fa-book-open"></i> Artigos
+                            </button>
+                            
+                            <button class="nav-btn ghost-btn" onclick="navigateTo('mapa.html')">
+                                <i class="fa-solid fa-map-location-dot"></i> Mapa 3D
+                            </button>
+                            
+                            <button class="nav-btn ghost-btn" onclick="navigateTo('aprenda.html')">
+                                <i class="fa-solid fa-graduation-cap"></i> Aprenda Mais
+                            </button>
+                        </nav>
+                    </div>
+                </div>
+
+                <div class="hero-map-wrapper">
+                    <img src="mapa-bahia-stylized.png" alt="Mapa Estilizado da Bahia" class="hero-map-img">
+                    
+                    <div class="map-hover-card">
+                        <div class="hover-header">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <h3>Sítio da Pupileira</h3>
+                        </div>
+                        <p>Localizado no Campo da Pólvora, este sítio revela vestígios do século XIX e a expansão urbana de Salvador. Lá, foi identificado um cemitério de escravizados que funcionou por 150 anos, enterrando de forma indigna milhares de escravizados e seus descendentes.</p>
+                        <div class="hover-gallery">
+                            <img src="https://admin.cnnbrasil.com.br/wp-content/uploads/sites/12/2025/10/pupileira-cemiterio-e1761485609524.png?w=419&h=283&crop=0" alt="Cerâmica">
+                            <img src="https://midias.correio24horas.com.br/2025/05/26/escavacao-e-fruto-de-pesquisa-da-ufba-2740917.jpeg" alt="Escavação">
+                        </div>
+                        
+                        <a href="https://www.ufba.br/ufba_em_pauta/escavacoes-confirmam-cemiterio-de-escravizados-no-complexo-da-pupileira-em-salvador" target="_blank" class="ufba-btn">
+                            <i class="fa-solid fa-graduation-cap"></i> Saiba mais (UFBA)
+                        </a>
+                    </div>
+                </div>
+
+                <div class="scroll-indicator" style="z-index: 10;" onclick="document.querySelector('.snap-container').scrollBy({top: window.innerHeight, behavior: 'smooth'})">
+                    <span>Continue Escavando</span>
+                    <i class="fa-solid fa-chevron-down bouncing"></i>
+                </div>
+            </section>
+        </div>
+
+        <div class="snap-section">
+            <section id="sobre" class="about-section">
+                <div class="about-wrapper">
+                    
+                    <div class="about-text-content reveal-on-scroll">
+                        <span class="section-label">Fundamentos</span>
+                        <h2 class="section-heading">O Que é Arqueologia?</h2>
+                        <p class="about-paragraph">
+                            A arqueologia não é apenas sobre desenterrar objetos antigos; é a ciência que investiga as 
+                            sociedades humanas através de seus vestígios materiais. Cada fragmento de cerâmica, cada 
+                            alicerce de construção e cada marca na paisagem conta uma história silenciosa sobre como 
+                            viveram nossos antepassados.
+                        </p>
+                        <p class="about-paragraph">
+                            <strong>Por que ela é importante para a sociedade?</strong><br>
+                            Ela nos dá perspectiva. Ao entender o passado, compreendemos as raízes de nossos costumes, 
+                            das desigualdades sociais e da evolução urbana. Preservar sítios arqueológicos é manter 
+                            viva a memória coletiva que define quem somos hoje.
+                        </p>
+                    </div>
+
+                    <div class="about-visuals">
+                        <div class="feature-card reveal-on-scroll reveal-delay-1">
+                            <div class="feature-icon"><i class="fa-solid fa-hourglass-half"></i></div>
+                            <div class="feature-info">
+                                <h4>Tempo Profundo</h4>
+                                <p>Conexão tangível com eras passadas, revelando a longevidade da experiência humana.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card reveal-on-scroll reveal-delay-2">
+                            <div class="feature-icon"><i class="fa-solid fa-people-roof"></i></div>
+                            <div class="feature-info">
+                                <h4>Identidade Coletiva</h4>
+                                <p>Entender de onde viemos fortalece o senso de pertencimento e cidadania.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card reveal-on-scroll reveal-delay-3">
+                            <div class="feature-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+                            <div class="feature-info">
+                                <h4>Preservação Cultural</h4>
+                                <p>Proteger o patrimônio material é garantir que o futuro tenha acesso à sua própria história.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <div class="snap-section">
+            <section class="about-section">
+                <div class="about-wrapper">
+                    
+                    <div class="about-visuals">
+                        <div class="feature-card reveal-on-scroll reveal-delay-1">
+                            <div class="feature-icon"><i class="fa-solid fa-hand-holding-hand"></i></div>
+                            <div class="feature-info">
+                                <h4>O Objeto de Estudo</h4>
+                                <p><strong>Arqueologia:</strong> Foca na cultura humana e seus artefatos.<br>
+                                   <strong>Paleontologia:</strong> Foca em fósseis e evolução da vida.</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card reveal-on-scroll reveal-delay-2">
+                            <div class="feature-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                            <div class="feature-info">
+                                <h4>Escala de Tempo</h4>
+                                <p>Enquanto arqueólogos lidam com milhares de anos (História), paleontólogos lidam com milhões (Eras Geológicas).</p>
+                            </div>
+                        </div>
+
+                        <div class="feature-card reveal-on-scroll reveal-delay-3">
+                            <div class="feature-icon"><i class="fa-solid fa-dragon"></i></div>
+                            <div class="feature-info">
+                                <h4>Não caçamos Dinos!</h4>
+                                <p>Dinossauros são trabalho para paleontólogos. Nós buscamos as histórias de quem viveu aqui antes de nós.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-text-content reveal-on-scroll">
+                        <span class="section-label">Distinções</span>
+                        <h2 class="section-heading">Arqueologia <span style="color:#666">vs</span> Paleontologia</h2>
+                        
+                        <p class="about-paragraph">
+                            É a confusão mais comum nos filmes! Mas a diferença é clara: a <strong>Arqueologia</strong> é uma ciência social. 
+                            Nós estudamos a humanidade. Buscamos entender como as sociedades se organizavam, no que acreditavam e como viviam, 
+                            analisando o que elas deixaram para trás (ferramentas, cerâmicas, construções).
+                        </p>
+                        
+                        <p class="about-paragraph">
+                            Já a <strong>Paleontologia</strong> é ligada à biologia e geologia. Ela estuda a evolução da vida na Terra 
+                            muito antes do ser humano existir. Se você encontrou um pote de barro, chame um arqueólogo. 
+                            Se encontrou um osso de T-Rex, chame um paleontólogo!
+                        </p>
+                    </div>
+
+                </div>
+            </section>
+        </div>
+
+    </main>
+
+</body>
+</html>

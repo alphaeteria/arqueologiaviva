@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arqueologia Viva - Raio-X Urbano</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Importando Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body class="no-scroll"> <div id="page-loader" class="loader-overlay">
+        <div class="loader-content">
+            <span class="loader-text">Estabelecendo Conexão via Satélite...</span>
+        </div>
+    </div>
+
+    <div class="map-ui-layer">
+        
+        <header class="map-header">
+            <button class="back-btn-circle" onclick="navigateTo('index.html')" title="Abortar Missão (Voltar)">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+            
+            <div class="search-box-wrapper map-search">
+                <i class="fa-solid fa-satellite-dish"></i>
+                <input type="text" id="location-search" placeholder="Localizar Sítio (ex: Salvador, Cairo)...">
+                <button id="search-btn"><i class="fa-solid fa-crosshairs"></i></button>
+            </div>
+
+            <div class="system-status">
+                <span class="status-dot"></span> SISTEMA ONLINE
+            </div>
+        </header>
+
+        <div class="map-controls">
+            <button class="control-btn" onclick="zoomIn()" title="Aproximar"><i class="fa-solid fa-plus"></i></button>
+            <button class="control-btn" onclick="zoomOut()" title="Afastar"><i class="fa-solid fa-minus"></i></button>
+            <div class="divider"></div>
+            <button class="control-btn" onclick="resetView()" title="Resetar Vista"><i class="fa-solid fa-globe"></i></button>
+        </div>
+
+        <footer class="map-footer">
+            <div class="telemetry-data">
+                <div class="data-block">
+                    <label>LATITUDE</label>
+                    <span id="lat-display">--.----°</span>
+                </div>
+                <div class="data-block">
+                    <label>LONGITUDE</label>
+                    <span id="lon-display">--.----°</span>
+                </div>
+                <div class="data-block">
+                    <label>ALVO</label>
+                    <span id="target-display">AGUARDANDO SELEÇÃO</span>
+                </div>
+            </div>
+        </footer>
+
+        <div id="site-card" class="site-info-panel hidden">
+            <div class="panel-header">
+                <h2 id="panel-title">Nome do Sítio</h2>
+                <button class="close-panel" onclick="closePanel()"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="panel-body">
+                <p id="panel-coords" class="coords-text">Coordenadas: 00.00, 00.00</p>
+                <p id="panel-desc">Breve descrição do local encontrado via satélite.</p>
+                <button class="scan-btn" onclick="alert('Iniciando escaneamento detalhado...')">
+                    <i class="fa-solid fa-layer-group"></i> INICIAR ESCANEAMENTO
+                </button>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <script src="dados.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

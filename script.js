@@ -595,7 +595,7 @@ function setupFeedbackForm(form) {
         const btnText = document.getElementById('btn-text');
         const successMsg = document.getElementById('success-message');
         const submitBtn = document.querySelector('.submit-btn');
-        const GOOGLE_SCRIPT_URL = 'COLE_SUA_URL_DO_GOOGLE_APPS_SCRIPT_AQUI';
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwT91RVhC_7Wp_Xv_5JZHRhfHUWYtFYwfXTMHXUZYrufX1OIt0cSYUmIBlWoDgrfA1_rQ/exec';
         const ratingInput = document.querySelector('input[name="rating"]:checked');
         const ratingValue = ratingInput ? `${ratingInput.value} ★` : "Não avaliado";
         const formData = new FormData();
@@ -692,4 +692,5 @@ function flyToLocation(query) {
         alert("Local não encontrado no banco de dados.");
     }
 }
+
 
